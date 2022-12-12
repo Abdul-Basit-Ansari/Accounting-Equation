@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Abdul-Basit-Ansari" />
+    <title>Accounting Equition</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="index.js"></script>
+  </head>
+  <body>
+    <div class="container text-center">
+      <h1 class="mt-4">Accounting Equition Calculator</h1>
+      <h6>By</h6>
+      <h6 class="text-muted">Abdul Basit Ansari</h6>
+      <div class="btn-group my-4" role="group">
+        <input type="radio" class="btn-check" onclick="activeAssests()" value="assestEqui" name="equition" id="assestEqui" checked>
+        <label class="btn btn-outline-primary" for="assestEqui" >Assest</label>
+        
+        <input type="radio" class="btn-check" onclick="activeRevenue()" value="revenueEqui" name="equition" id="revenueEqui">
+        <label class="btn btn-outline-primary" for="revenueEqui">Revenue</label>
+        
+      </div>
+      <div  id = "assestsBox" style="display:flex;" class="justify-content-around flex-column flex-sm-row">
+        <form class="mx-3" onsubmit="resAssestData();return false">
+          <div class="input-group justify-content-center">
+            <div>
+              <p class="mt-4">Assests $</p>
+              
+              <input
+              class="form-control text-center"
+              name="assests"
+              id="assests"
+              type="number"
+              placeholder="Assests"
+              />
+            </div>
+            <div>
+              <p class="mt-4">Liability $</p>
+              <input
+              class="form-control text-center"
+              name="liability"
+              id="liability"
+              type="number"
+              placeholder="Liability"
+              />
+            </div>
+            <div>
+              <p class="mt-4">Capital $</p>
+              <input
+              class="form-control text-center"
+              name="capital"
+              id="capital"
+              type="number"
+              placeholder="Capital"
+              />
+            </div>
+          </div>
+          <button type="submit" class="btn btn-success my-4">
+            Show Result
+          </button>
+        </form>
+      </div>
+      <div  id = "revenueBox" style="display:none;" class=" justify-content-around flex-column flex-sm-row">
+        <form class="mx-3" onsubmit="resRevenueData();return false">
+          <div class="input-group justify-content-center">
+            <div>
+              <p class="mt-4">Revenue $</p>
+              
+              <input
+              class="form-control text-center"
+              name="revenue"
+              id="revenue"
+              type="number"
+              placeholder="Revenue"
+              />
+            </div>
+            <div>
+              <p class="mt-4">Expense $</p>
+              <input
+              class="form-control text-center"
+              name="expense"
+              id="expense"
+              type="number"
+              placeholder="Expense"
+              />
+            </div>
+            <div>
+              <p class="mt-4">Profit / Loss $</p>
+              <input
+              class="form-control text-center"
+              name="profitLoss"
+              id="profitLoss"
+              type="number"
+              placeholder="Profit / Loss"
+              />
+            </div>
+          </div>
+          <button type="submit" class="btn btn-success my-4">
+            Show Result
+          </button>
+        </form>
+      </div>
+      <p class="mt-4" id="res"></p>
+    </div>
+  </body>
+  </html>
