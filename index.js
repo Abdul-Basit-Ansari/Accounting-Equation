@@ -69,4 +69,3 @@ const resRevenueData = ()=>{
     res.innerHTML = `Revenue + Expense = Profit / Loss <hr> Revenue = Profit / Loss + Expense <br> Revenue = ${pol} + ${exp} <br>Revnue = ${ans}  `
   }
 }
-
